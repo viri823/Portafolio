@@ -1,0 +1,72 @@
+/* Portfolio — Viridiana Meza Escobedo
+   Estilos: colores en :root (modo claro/oscuro), layout y componentes */
+:root{
+  --bg:#fff0f6; --ink:#1f2a4d; --muted:#5b6485; --card:#ffffff; --soft:#fbd3e2;
+  --accent:#e86a9a; --navy:#263a6e; --green:#3f8f5a; --stripe:rgba(244,166,192,.5);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#181c31; --ink:#f6eaf1; --muted:#b4b9d3; --card:#232846; --soft:#2d2f52;
+    --accent:#f49ac0; --navy:#9fb4ee; --green:#6fd093; --stripe:rgba(244,154,192,.10);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#181c31; --ink:#f6eaf1; --muted:#b4b9d3; --card:#232846; --soft:#2d2f52;
+  --accent:#f49ac0; --navy:#9fb4ee; --green:#6fd093; --stripe:rgba(244,154,192,.10);
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+h1,h2,h3,.px{font-family:"Press Start 2P","Courier New",monospace;font-weight:400;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:14px;font-weight:800}
+nav .logo{font-family:"Press Start 2P","Courier New",monospace;font-size:14px;color:var(--accent)}
+nav a{text-decoration:none;margin-left:18px}
+nav a:hover{color:var(--accent)}
+
+.hero{background:repeating-linear-gradient(90deg,var(--stripe) 0 22px,transparent 22px 44px);border-bottom:3px solid var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:center;padding-top:40px;padding-bottom:56px}
+.tag{display:inline-block;font-family:"Press Start 2P","Courier New",monospace;font-size:10px;background:var(--card);border:2px solid var(--ink);padding:6px 10px;margin-bottom:18px}
+h1{font-size:clamp(20px,4.2vw,34px);margin:0 0 16px;color:var(--navy)}
+.lead{font-size:18px;max-width:520px;margin:0 0 24px}
+.btn{display:inline-block;font-family:"Press Start 2P","Courier New",monospace;font-size:11px;text-decoration:none;padding:12px 16px;border:2px solid var(--ink);background:var(--accent);color:#1f2a4d;box-shadow:4px 4px 0 var(--ink);margin:0 10px 10px 0}
+.btn.alt{background:var(--card);color:var(--ink)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.avatar{background:var(--card);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--accent);padding:14px}
+.avatar svg{width:100%;height:auto;display:block;shape-rendering:crispEdges}
+.avatar p{margin:8px 0 0;text-align:center;font-size:10px;font-family:"Press Start 2P","Courier New",monospace;color:var(--muted)}
+
+section{padding:56px 0 8px}
+h2{font-size:clamp(14px,2.6vw,18px);color:var(--navy);margin:0 0 6px}
+h2::before{content:"▸ ";color:var(--accent)}
+.sub{color:var(--muted);margin:0 0 24px}
+
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font-family:"Nunito",system-ui,sans-serif;font-weight:800;font-size:13px;border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:5px 12px;cursor:pointer}
+.chip.on,.chip:hover{background:var(--accent);color:#1f2a4d}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.card{background:var(--card);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--accent);display:flex;flex-direction:column}
+.card .ph{height:130px;border-bottom:2px solid var(--ink);display:grid;place-items:center;text-align:center;font-size:12px;color:var(--muted);
+  background:repeating-linear-gradient(45deg,var(--soft) 0 10px,transparent 10px 20px)}
+.card .body{padding:16px}
+.card h3{font-size:11px;margin:0 0 10px;color:var(--navy)}
+.card p{margin:0 0 12px;font-size:15px}
+.tags span{display:inline-block;font-size:11px;font-weight:800;border:1.5px solid var(--green);color:var(--green);padding:1px 8px;margin:0 6px 6px 0}
+.card.hide{display:none}
+.badge{font-size:11px;font-weight:800;color:#1f2a4d;background:#f6c453;border:2px solid var(--ink);padding:1px 8px;display:inline-block;margin-bottom:10px}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.skill{background:var(--card);border:2px solid var(--ink);padding:14px 16px}
+.skill h3{font-size:10px;margin:0 0 8px;color:var(--accent)}
+.skill p{margin:0;font-size:14px}
+
+.contact{text-align:center;padding:64px 0}
+.contact p{max-width:480px;margin:0 auto 22px}
+footer{border-top:3px solid var(--ink);padding:18px 0;text-align:center;font-size:12px;color:var(--muted)}
+footer .px{font-size:9px}
+@media (max-width:720px){.hero .wrap{grid-template-columns:1fr}.avatar{max-width:200px}}

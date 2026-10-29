@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viridiana Meza Escobedo — Embedded Systems Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="wrap">
+  <nav>
+    <span class="logo">VM.exe</span>
+    <div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">★ Embedded Systems Engineer</span>
+      <h1>Hi, I’m <span style="color:var(--accent)">Viridiana</span></h1>
+      <p class="lead">I design PCBs, write firmware and connect sensors to the cloud — from mangrove monitoring to automated shrimp feeding. Bilingual (ES/EN), based in Mérida, México.</p>
+      <a class="btn" href="#projects">See projects</a>
+      <a class="btn alt" href="#contact">Get in touch</a>
+    </div>
+    <div class="avatar">
+      <svg id="sprite" viewBox="0 0 16 18" aria-label="Pixel-art avatar of an engineer with a hard hat and long dark hair"></svg>
+      <p>LV.1 ENGINEER</p>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="sub">A few things I’ve built. Tap a tag to filter.</p>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">All</button>
+      <button class="chip" data-f="PCB">PCB</button>
+      <button class="chip" data-f="Firmware">Firmware</button>
+      <button class="chip" data-f="IoT">IoT</button>
+    </div>
+    <div class="grid">
+      <article class="card" data-tags="PCB Firmware IoT">
+        <div class="ph">[ PCB photo / render goes here ]</div>
+        <div class="body">
+          <h3>Mangrove IoT Monitoring</h3>
+          <p>Two custom PCBs and a two-node system reading 20+ sensor variables over I2C, RS485/Modbus and Zigbee, with non-blocking MicroPython firmware.</p>
+          <div class="tags"><span>PCB</span><span>Firmware</span><span>IoT</span></div>
+        </div>
+      </article>
+      <article class="card" data-tags="PCB Firmware">
+        <div class="ph">[ PCB photo / render goes here ]</div>
+        <div class="body">
+          <h3>Automatic Shrimp Feeder</h3>
+          <p>Led a team of 4. Designed the ESP32-S3 master PCB in OrCAD for 11 tanks, with a multi-stage power design and galvanic isolation on RS485.</p>
+          <div class="tags"><span>PCB</span><span>Firmware</span></div>
+        </div>
+      </article>
+      <article class="card" data-tags="Firmware IoT">
+        <div class="ph">[ dashboard screenshot goes here ]</div>
+        <div class="body">
+          <span class="badge">🏆 1st place — UPY Embedded Contest</span>
+          <h3>MASIS Smart Irrigation</h3>
+          <p>FreeRTOS firmware connected to an MQTT broker, plus a Node-RED dashboard with live moisture, remote pump control and emergency stop.</p>
+          <div class="tags"><span>Firmware</span><span>IoT</span></div>
+        </div>
+      </article>
+      <article class="card" data-tags="PCB IoT">
+        <div class="ph">[ PCB photo / render goes here ]</div>
+        <div class="body">
+          <h3>Wildfire Early-Warning Node</h3>
+          <p>Wireless ESP32-S2 + LoRa node with solar/USB-C power and TVS protection, built for areas without electrical infrastructure (10–15 km range).</p>
+          <div class="tags"><span>PCB</span><span>IoT</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="sub">The toolbox.</p>
+    <div class="skills">
+      <div class="skill"><h3>Firmware</h3><p>C (Arduino), MicroPython, Python, FreeRTOS</p></div>
+      <div class="skill"><h3>PCB &amp; CAD</h3><p>OrCAD, Altium, EasyEDA, Eagle, Proteus · SolidWorks, Fusion 360</p></div>
+      <div class="skill"><h3>Protocols</h3><p>MQTT, Modbus/RS485, I2C, SPI, UART, LoRa, Zigbee</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="justify-content:center">Let’s talk</h2>
+    <p>Looking for opportunities in embedded systems, firmware and IoT. Say hi!</p>
+    <a class="btn" href="mailto:viridianamezaescobedo@gmail.com">Email me</a>
+    <a class="btn alt" href="https://linkedin.com/in/viridianameza">LinkedIn</a>
+  </section>
+</main>
+
+<footer><span class="px">© 2026 VIRIDIANA MEZA · MÉRIDA, MX</span></footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
