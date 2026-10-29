@@ -1,8 +1,8 @@
 /* Portfolio — Viridiana Meza Escobedo
    Estilos: colores en :root (modo claro/oscuro), layout y componentes */
 :root{
-  --bg:#fff0f6; --ink:#1f2a4d; --muted:#5b6485; --card:#ffffff; --soft:#fbd3e2;
-  --accent:#e86a9a; --navy:#263a6e; --green:#3f8f5a; --stripe:rgba(244,166,192,.5);
+  --bg:#f6f3fd; --ink:#1f2a4d; --muted:#5b6485; --card:#ffffff; --soft:#e7e0f8;
+  --accent:#e86a9a; --navy:#263a6e; --green:#3f8f5a; --stripe:rgba(190,170,240,.25);
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
